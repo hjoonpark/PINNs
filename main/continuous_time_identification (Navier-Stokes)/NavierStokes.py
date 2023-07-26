@@ -206,7 +206,8 @@ def axisEqual3D(ax):
         
         
 if __name__ == "__main__": 
-      
+    tf.logging.set_verbosity(tf.logging.ERROR)
+
     N_train = 5000
     
     layers = [3, 20, 20, 20, 20, 20, 20, 20, 20, 2]
@@ -252,7 +253,7 @@ if __name__ == "__main__":
 
     # Training
     model = PhysicsInformedNN(x_train, y_train, t_train, u_train, v_train, layers)
-    model.train(200000)
+    model.train(10000)
     
     # Test Data
     snap = np.array([100])
@@ -284,11 +285,11 @@ if __name__ == "__main__":
     print('Error l2: %.5f%%' % (error_lambda_2))                  
     
     # Plot Results
-#    plot_solution(X_star, u_pred, 1)
-#    plot_solution(X_star, v_pred, 2)
-#    plot_solution(X_star, p_pred, 3)    
-#    plot_solution(X_star, p_star, 4)
-#    plot_solution(X_star, p_star - p_pred, 5)
+   plot_solution(X_star, u_pred, 1)
+   plot_solution(X_star, v_pred, 2)
+   plot_solution(X_star, p_pred, 3)    
+   plot_solution(X_star, p_star, 4)
+   plot_solution(X_star, p_star - p_pred, 5)
     
     # Predict for plotting
     lb = X_star.min(0)
@@ -421,7 +422,7 @@ if __name__ == "__main__":
     ax.set_zlim3d(r3)
     axisEqual3D(ax)
     
-    # savefig('./figures/NavierStokes_data') 
+    savefig('./figures/NavierStokes_data') 
 
     
     fig, ax = newfig(1.015, 0.8)
@@ -488,5 +489,5 @@ if __name__ == "__main__":
  
     ax.text(0.015,0.0,s)
     
-    # savefig('./figures/NavierStokes_prediction') 
+    savefig('./figures/NavierStokes_prediction') 
 
