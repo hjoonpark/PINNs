@@ -1,0 +1,110 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 4 files
+Detected 4 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: main/discrete_time_inference (AC)/AC.py
+--------------------------------------------------------------------------------
+main/discrete_time_inference (AC)/AC.py:62:25: ERROR: Using member tf.contrib.opt.ScipyOptimizerInterface in deprecated module tf.contrib. tf.contrib.opt.ScipyOptimizerInterface cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+--------------------------------------------------------------------------------
+File: main/discrete_time_identification (KdV)/KdV.py
+--------------------------------------------------------------------------------
+main/discrete_time_identification (KdV)/KdV.py:70:25: ERROR: Using member tf.contrib.opt.ScipyOptimizerInterface in deprecated module tf.contrib. tf.contrib.opt.ScipyOptimizerInterface cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+--------------------------------------------------------------------------------
+File: main/continuous_time_identification (Navier-Stokes)/NavierStokes_tf1.py
+--------------------------------------------------------------------------------
+main/continuous_time_identification (Navier-Stokes)/NavierStokes_tf1.py:69:25: ERROR: Using member tf.contrib.opt.ScipyOptimizerInterface in deprecated module tf.contrib. tf.contrib.opt.ScipyOptimizerInterface cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+--------------------------------------------------------------------------------
+File: main/continuous_time_inference (Schrodinger)/Schrodinger.py
+--------------------------------------------------------------------------------
+main/continuous_time_inference (Schrodinger)/Schrodinger.py:88:25: ERROR: Using member tf.contrib.opt.ScipyOptimizerInterface in deprecated module tf.contrib. tf.contrib.opt.ScipyOptimizerInterface cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'main/'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'main/discrete_time_inference (AC)/AC.py'
+ outputting to 'main_v2/discrete_time_inference (AC)/AC.py'
+--------------------------------------------------------------------------------
+
+18:0: INFO: Renamed 'tf.set_random_seed' to 'tf.compat.v1.set_random_seed'
+46:20: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+46:38: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+49:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+50:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+51:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+52:27: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+53:27: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+62:25: ERROR: Using member tf.contrib.opt.ScipyOptimizerInterface in deprecated module tf.contrib. tf.contrib.opt.ScipyOptimizerInterface cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+70:30: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+73:15: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+91:27: INFO: Renamed 'tf.truncated_normal' to 'tf.random.truncated_normal'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'main/discrete_time_identification (KdV)/KdV.py'
+ outputting to 'main_v2/discrete_time_identification (KdV)/KdV.py'
+--------------------------------------------------------------------------------
+
+19:0: INFO: Renamed 'tf.set_random_seed' to 'tf.compat.v1.set_random_seed'
+54:20: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+54:38: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+57:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+58:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+59:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+60:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+61:27: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+62:27: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+70:25: ERROR: Using member tf.contrib.opt.ScipyOptimizerInterface in deprecated module tf.contrib. tf.contrib.opt.ScipyOptimizerInterface cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+78:30: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+81:15: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+99:27: INFO: Renamed 'tf.truncated_normal' to 'tf.random.truncated_normal'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'main/continuous_time_identification (Navier-Stokes)/NavierStokes_tf1.py'
+ outputting to 'main_v2/continuous_time_identification (Navier-Stokes)/NavierStokes_tf1.py'
+--------------------------------------------------------------------------------
+
+22:0: INFO: Renamed 'tf.set_random_seed' to 'tf.compat.v1.set_random_seed'
+52:20: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+52:38: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+55:20: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+56:20: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+57:20: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+59:20: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+60:20: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+69:25: ERROR: Using member tf.contrib.opt.ScipyOptimizerInterface in deprecated module tf.contrib. tf.contrib.opt.ScipyOptimizerInterface cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+77:30: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+80:15: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+98:27: INFO: Renamed 'tf.truncated_normal' to 'tf.random.truncated_normal'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'main/continuous_time_inference (Schrodinger)/Schrodinger.py'
+ outputting to 'main_v2/continuous_time_inference (Schrodinger)/Schrodinger.py'
+--------------------------------------------------------------------------------
+
+22:0: INFO: Renamed 'tf.set_random_seed' to 'tf.compat.v1.set_random_seed'
+56:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+57:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+59:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+60:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+62:23: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+63:23: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+65:23: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+66:23: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+68:22: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+69:22: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+88:25: ERROR: Using member tf.contrib.opt.ScipyOptimizerInterface in deprecated module tf.contrib. tf.contrib.opt.ScipyOptimizerInterface cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+96:30: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+100:20: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+100:38: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+103:15: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+121:27: INFO: Renamed 'tf.truncated_normal' to 'tf.random.truncated_normal'
+--------------------------------------------------------------------------------
+
